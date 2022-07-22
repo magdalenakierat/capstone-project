@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-export default function Card() {
+export default function Card(props) {
   return (
     <CardContainer>
-      <h2>Atemübung</h2>
-      <p>4 Sekunden tief einatmen, 7 Sekunden ruhig ausatmen</p>
+      <h2>{props.category}</h2>
+      <p>{props.description}</p>
       <Timing>
-        <p>Wiederholung: alle 60 Minuten</p>
-        <p>Dauer: 5 Minuten</p>
+        <p>Wiederholung: {props.repeat}</p>
+        <p>Dauer: {props.duration}</p>
       </Timing>
     </CardContainer>
   );
@@ -19,6 +19,7 @@ const CardContainer = styled.article`
   box-shadow: 0px 8px 8px rgba(102, 102, 102, 0.05);
   border-radius: 1rem;
   padding: 1rem;
+  margin-bottom: 1rem;
 `;
 
 const Timing = styled.div`
