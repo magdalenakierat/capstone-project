@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Card from './components/Card/Card';
+import Cards from './components/Cards/Cards';
 
 export default function App() {
   const excercises = [
@@ -30,24 +30,7 @@ export default function App() {
     <Wrapper>
       <h1>Pausen</h1>
       <main>
-        <Card
-          category={excercises[0].category}
-          description={excercises[0].description}
-          repeat={excercises[0].repeat}
-          duration={excercises[0].duration}
-        />
-        <Card
-          category={excercises[1].category}
-          description={excercises[1].description}
-          repeat={excercises[1].repeat}
-          duration={excercises[1].duration}
-        />
-        <Card
-          category={excercises[2].category}
-          description={excercises[2].description}
-          repeat={excercises[2].repeat}
-          duration={excercises[2].duration}
-        />
+        <Cards excercises={excercises} />
       </main>
     </Wrapper>
   );
