@@ -21,3 +21,5 @@ const excercises = [
     duration: 'für 2 Minuten',
   },
 ];
+
+export default excercises;
