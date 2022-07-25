@@ -15,8 +15,8 @@ export default function Card(props) {
 
 const CardContainer = styled.article`
   width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0px 8px 8px rgba(102, 102, 102, 0.05);
+  background-color: #fff;
+  box-shadow: 0 8px 8px rgba(102, 102, 102, 0.05);
   border-radius: 1rem;
   padding: 1rem;
   margin-bottom: 1rem;
