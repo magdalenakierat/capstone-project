@@ -4,10 +4,10 @@ export default function Card(props) {
   return (
     <CardContainer>
       <h2>{props.category}</h2>
-      <p>{props.description}</p>
+      <p data-testid="description">{props.description}</p>
       <Timing>
-        <p>Wiederholung: {props.repeat}</p>
-        <p>Dauer: {props.duration}</p>
+        <p data-testid="repeat">Wiederholung: {props.repeat}</p>
+        <p data-testid="duration">Dauer: {props.duration}</p>
       </Timing>
     </CardContainer>
   );
