@@ -1,10 +1,10 @@
 import Card from '../Card/Card';
 
-export default function Cards(props) {
+export default function Cards({excercises}) {
   return (
     <div>
       <>
-        {props.excercises.map(excercise => (
+        {excercises.map(excercise => (
           <Card
             key={excercise.id}
             category={excercise.category}

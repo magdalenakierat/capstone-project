@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-export default function Card(props) {
+export default function Card({category, description, repeat, duration}) {
   return (
     <CardContainer>
-      <h2>{props.category}</h2>
-      <p data-testid="description">{props.description}</p>
+      <h2>{category}</h2>
+      <p data-testid="description">{description}</p>
       <StyledList>
-        <li data-testid="repeat">Wiederholung: {props.repeat}</li>
-        <li data-testid="duration">Dauer: {props.duration}</li>
+        <li data-testid="repeat">Wiederholung: {repeat}</li>
+        <li data-testid="duration">Dauer: {duration}</li>
       </StyledList>
     </CardContainer>
   );
