@@ -4,16 +4,14 @@ import excercises from './db';
 
 export default function App() {
   return (
-    <Wrapper>
+    <StyledWrapper>
       <h1>Pausen</h1>
-      <main>
-        <Cards excercises={excercises} />
-      </main>
-    </Wrapper>
+      <Cards excercises={excercises} />
+    </StyledWrapper>
   );
 }
 
-const Wrapper = styled.div`
+const StyledWrapper = styled.main`
   max-width: 860px;
   margin: 0 auto;
   padding: 24px;
