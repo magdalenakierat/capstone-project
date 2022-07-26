@@ -5,10 +5,10 @@ export default function Card(props) {
     <CardContainer>
       <h2>{props.category}</h2>
       <p data-testid="description">{props.description}</p>
-      <Timing>
-        <p data-testid="repeat">Wiederholung: {props.repeat}</p>
-        <p data-testid="duration">Dauer: {props.duration}</p>
-      </Timing>
+      <StyledList>
+        <li data-testid="repeat">Wiederholung: {props.repeat}</li>
+        <li data-testid="duration">Dauer: {props.duration}</li>
+      </StyledList>
     </CardContainer>
   );
 }
@@ -22,8 +22,11 @@ const CardContainer = styled.article`
   margin-bottom: 1rem;
 `;
 
-const Timing = styled.div`
+const StyledList = styled.ul`
   border-top: 1px solid rgba(0, 0, 0, 0.12);
   margin-top: 1rem;
   padding-top: 1rem;
+  list-style-type: none;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 `;
