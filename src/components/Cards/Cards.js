@@ -1,16 +1,26 @@
 import Card from '../Card/Card';
 
-export default function Cards({excercises}) {
+export default function Cards({exercises, filter}) {
+  const filteredExercises = exercises.filter(exercise => {
+    if (filter === 'Alle') {
+      return true;
+    }
+    if (filter === exercise.category) {
+      return true;
+    } else {
+      return false;
+    }
+  });
   return (
     <div>
       <>
-        {excercises.map(excercise => (
+        {filteredExercises.map(exercise => (
           <Card
-            key={excercise.id}
-            category={excercise.category}
-            description={excercise.description}
-            repeat={excercise.repeat}
-            duration={excercise.duration}
+            key={exercise.id}
+            category={exercise.category}
+            description={exercise.description}
+            repeat={exercise.repeat}
+            duration={exercise.duration}
           />
         ))}
       </>

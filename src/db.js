@@ -1,4 +1,4 @@
-const excercises = [
+const exercises = [
   {
     id: 'e1',
     category: 'Atemübung',
@@ -22,4 +22,4 @@ const excercises = [
   },
 ];
 
-export default excercises;
+export default exercises;

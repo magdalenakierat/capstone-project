@@ -1,10 +1,20 @@
 import styled from 'styled-components';
-import CategoryListItem from '../CategoryListItem/CategoryListItem';
 
-export default function CategoryList() {
+export default function CategoryList({onFilter}) {
   return (
     <StyledCategoryList>
-      <CategoryListItem></CategoryListItem>
+      <StyledCategoryListItem>
+        <StyledButton onClick={() => onFilter('Alle')}>Alle</StyledButton>
+      </StyledCategoryListItem>
+      <StyledCategoryListItem>
+        <StyledButton onClick={() => onFilter('Atemübung')}>Atem</StyledButton>
+      </StyledCategoryListItem>
+      <StyledCategoryListItem>
+        <StyledButton onClick={() => onFilter('Augenübung')}>Augen</StyledButton>
+      </StyledCategoryListItem>
+      <StyledCategoryListItem>
+        <StyledButton onClick={() => onFilter('Bewegung')}>Bewegung</StyledButton>
+      </StyledCategoryListItem>
     </StyledCategoryList>
   );
 }
@@ -13,4 +23,23 @@ const StyledCategoryList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin: 1rem 0 0.25rem 0;
+`;
+
+const StyledCategoryListItem = styled.li`
+  list-style-type: none;
+`;
+
+const StyledButton = styled.button`
+  border-radius: 1.25rem;
+  border: none;
+  background: #e6e8e9;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem 0.5rem 0;
+  &:hover {
+    background-color: #000;
+    color: #e6e8e9;
+  }
 `;
