@@ -1,12 +1,24 @@
+import {useState} from 'react';
 import styled from 'styled-components';
 import Cards from './components/Cards/Cards';
-import excercises from './db';
+import CategoryList from './components/CategoryList/CategoryList';
+import exercises from './db';
 
 export default function App() {
+  const [filter, setFilter] = useState('Alle');
+
+  function handleFilter(stringToFilter) {
+    setFilter(stringToFilter);
+  }
+
   return (
     <StyledWrapper>
       <h1>Pausen</h1>
-      <Cards excercises={excercises} />
+      <section>
+        <h2>Nach Kategorie filtern</h2>
+        <CategoryList onFilter={handleFilter} />
+      </section>
+      <Cards filter={filter} exercises={exercises} />
     </StyledWrapper>
   );
 }
