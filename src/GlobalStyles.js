@@ -11,7 +11,7 @@ export default styled.createGlobalStyle`
   }
 
   body {
-    font-family: sans-serif;
+    font-family: 'Work Sans', sans-serif;
     background-color: #fafafa;
   }
 
