@@ -25,6 +25,10 @@ export default styled.createGlobalStyle`
     line-height: 1.25rem;
   }
 
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
   button,
   input,
   textarea {

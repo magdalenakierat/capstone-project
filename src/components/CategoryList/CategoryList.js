@@ -7,13 +7,13 @@ export default function CategoryList({onFilter}) {
         <StyledButton onClick={() => onFilter('Alle')}>Alle</StyledButton>
       </StyledCategoryListItem>
       <StyledCategoryListItem>
+        <StyledButton onClick={() => onFilter('Bewegung')}>Bewegung</StyledButton>
+      </StyledCategoryListItem>
+      <StyledCategoryListItem>
         <StyledButton onClick={() => onFilter('Atemübung')}>Atem</StyledButton>
       </StyledCategoryListItem>
       <StyledCategoryListItem>
         <StyledButton onClick={() => onFilter('Augenübung')}>Augen</StyledButton>
-      </StyledCategoryListItem>
-      <StyledCategoryListItem>
-        <StyledButton onClick={() => onFilter('Bewegung')}>Bewegung</StyledButton>
       </StyledCategoryListItem>
     </StyledCategoryList>
   );
@@ -35,7 +35,7 @@ const StyledButton = styled.button`
   background: #e6e8e9;
   color: #000;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.25rem;
   padding: 0.5rem 1rem;
   margin: 0 0.5rem 0.5rem 0;
