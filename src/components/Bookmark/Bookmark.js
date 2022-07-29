@@ -1,13 +1,16 @@
 import styled from 'styled-components';
-import Icon from '@mdi/react';
-import {mdiCardsHeartOutline} from '@mdi/js';
+import {useState} from 'react';
+import BookmarkIcon from '../BookmarkIcon/BookmarkIcon';
+import NoBookmarkIcon from '../NoBookmarkIcon/NoBookmarkIcon';
 
 export default function Bookmark() {
-  return (
-    <StyledBookmark>
-      <Icon path={mdiCardsHeartOutline} title="Noch kein Favorit" size={0.75} color="black" />
-    </StyledBookmark>
-  );
+  const [bookmark, setBookmark] = useState(false);
+
+  const handleClick = () => {
+    setBookmark(!bookmark);
+  };
+
+  return <StyledBookmark onClick={handleClick}>{bookmark ? <BookmarkIcon /> : <NoBookmarkIcon />}</StyledBookmark>;
 }
 
 const StyledBookmark = styled.button`
