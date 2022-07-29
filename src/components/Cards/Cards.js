@@ -17,6 +17,7 @@ export default function Cards({onChangeBookmark, exercises, filter}) {
       <>
         {filteredExercises.map(exercise => (
           <Card
+            bookmarked={exercise.bookmarked}
             id={exercise.id}
             onChangeBookmark={onChangeBookmark}
             key={exercise.id}
