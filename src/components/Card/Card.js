@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import Bookmark from '../Bookmark/Bookmark';
 
-export default function Card({category, description, repeat, duration}) {
+export default function Card({id, onChangeBookmark, bookmarked, category, description, repeat, duration}) {
   return (
     <CardContainer>
-      <Bookmark />
+      <Bookmark id={id} bookmarked={bookmarked} onChangeBookmark={onChangeBookmark} />
       <h2>{category}</h2>
       <p data-testid="description">{description}</p>
       <StyledList>

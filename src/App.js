@@ -7,8 +7,23 @@ import exercises from './db';
 export default function App() {
   const [filter, setFilter] = useState('Alle');
 
+  const [exercise, setExercise] = useState(exercises);
+
   function handleFilter(stringToFilter) {
     setFilter(stringToFilter);
+  }
+
+  function changeBookmark(id, bookmarked) {
+    exercises.forEach(() => {
+      setExercise(current =>
+        current.map(obj => {
+          if (obj.id === id) {
+            return {...obj, bookmarked: bookmarked};
+          }
+          return obj;
+        })
+      );
+    });
   }
 
   return (
@@ -18,7 +33,7 @@ export default function App() {
         <h2>Nach Kategorie filtern</h2>
         <CategoryList onFilter={handleFilter} />
       </section>
-      <Cards filter={filter} exercises={exercises} />
+      <Cards filter={filter} exercises={exercise} onChangeBookmark={changeBookmark} />
     </StyledWrapper>
   );
 }
