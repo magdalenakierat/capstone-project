@@ -15,6 +15,9 @@ export default function CategoryList({onFilter}) {
       <StyledCategoryListItem>
         <StyledButton onClick={() => onFilter('Augenübung')}>Augen</StyledButton>
       </StyledCategoryListItem>
+      <StyledCategoryListItem>
+        <StyledButton>Favoriten</StyledButton>
+      </StyledCategoryListItem>
     </StyledCategoryList>
   );
 }
