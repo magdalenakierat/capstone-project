@@ -2,28 +2,26 @@ import {useState} from 'react';
 import styled from 'styled-components';
 import Cards from './components/Cards/Cards';
 import CategoryList from './components/CategoryList/CategoryList';
-import exercises from './db';
+import db from './db';
 
 export default function App() {
   const [filter, setFilter] = useState('Alle');
 
-  const [exercise, setExercise] = useState(exercises);
+  const [exercises, setExercise] = useState(db);
 
   function handleFilter(stringToFilter) {
     setFilter(stringToFilter);
   }
 
-  function changeBookmark(id, bookmarked) {
-    exercises.forEach(() => {
-      setExercise(current =>
-        current.map(obj => {
-          if (obj.id === id) {
-            return {...obj, bookmarked: bookmarked};
-          }
-          return obj;
-        })
-      );
-    });
+  function handleBookmark(id) {
+    setExercise(
+      exercises.map(exercise => {
+        if (exercise.id === id) {
+          return {...exercise, bookmarked: !exercise.bookmarked};
+        }
+        return exercise;
+      })
+    );
   }
 
   return (
@@ -31,9 +29,9 @@ export default function App() {
       <h1>Pausen</h1>
       <section>
         <h2>Nach Kategorie filtern</h2>
-        <CategoryList onFilter={handleFilter} />
+        <CategoryList filter={filter} onFilter={handleFilter} />
       </section>
-      <Cards filter={filter} exercises={exercise} onChangeBookmark={changeBookmark} />
+      <Cards filter={filter} exercises={exercises} onBookmark={handleBookmark} />
     </StyledWrapper>
   );
 }

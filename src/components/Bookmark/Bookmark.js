@@ -1,17 +1,11 @@
 import styled from 'styled-components';
-import {useState} from 'react';
 import BookmarkIcon from '../BookmarkIcon/BookmarkIcon';
 import NoBookmarkIcon from '../NoBookmarkIcon/NoBookmarkIcon';
 
-export default function Bookmark({onChangeBookmark, bookmarked, id}) {
-  const [bookmark, setBookmark] = useState(bookmarked);
-
-  const handleClick = () => {
-    setBookmark(!bookmark);
-    onChangeBookmark(id, !bookmark);
-  };
-
-  return <StyledBookmark onClick={handleClick}>{bookmark ? <BookmarkIcon /> : <NoBookmarkIcon />}</StyledBookmark>;
+export default function Bookmark({onBookmark, bookmarked, id}) {
+  return (
+    <StyledBookmark onClick={() => onBookmark(id)}>{bookmarked ? <BookmarkIcon /> : <NoBookmarkIcon />}</StyledBookmark>
+  );
 }
 
 const StyledBookmark = styled.button`

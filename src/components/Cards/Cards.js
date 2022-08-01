@@ -1,6 +1,6 @@
 import Card from '../Card/Card';
 
-export default function Cards({onChangeBookmark, exercises, filter}) {
+export default function Cards({onBookmark, exercises, filter}) {
   const filteredExercises = exercises.filter(exercise => {
     if (filter === 'Alle') {
       return true;
@@ -8,7 +8,7 @@ export default function Cards({onChangeBookmark, exercises, filter}) {
     if (filter === exercise.category) {
       return true;
     }
-    if (filter === exercise.bookmarked) {
+    if (filter === 'Favoriten' && exercise.bookmarked) {
       return true;
     } else {
       return false;
@@ -25,7 +25,7 @@ export default function Cards({onChangeBookmark, exercises, filter}) {
         ) : (
           filteredExercises.map(exercise => (
             <Card
-              onChangeBookmark={onChangeBookmark}
+              onBookmark={onBookmark}
               bookmarked={exercise.bookmarked}
               id={exercise.id}
               key={exercise.id}
