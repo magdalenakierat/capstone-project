@@ -10,23 +10,32 @@ export default function Cards({onChangeBookmark, exercises, filter}) {
     }
     if (filter === exercise.bookmarked) {
       return true;
+    } else {
+      return false;
     }
   });
   return (
     <div>
       <>
-        {filteredExercises.map(exercise => (
-          <Card
-            bookmarked={exercise.bookmarked}
-            id={exercise.id}
-            onChangeBookmark={onChangeBookmark}
-            key={exercise.id}
-            category={exercise.category}
-            description={exercise.description}
-            repeat={exercise.repeat}
-            duration={exercise.duration}
-          />
-        ))}
+        {filteredExercises.length === 0 ? (
+          <p>
+            Du hast noch keine Favoriten gespeichert. Lass dich weiter inspirieren oder atme einfach ein paar mal tief
+            durch.
+          </p>
+        ) : (
+          filteredExercises.map(exercise => (
+            <Card
+              onChangeBookmark={onChangeBookmark}
+              bookmarked={exercise.bookmarked}
+              id={exercise.id}
+              key={exercise.id}
+              category={exercise.category}
+              description={exercise.description}
+              repeat={exercise.repeat}
+              duration={exercise.duration}
+            />
+          ))
+        )}
       </>
     </div>
   );
