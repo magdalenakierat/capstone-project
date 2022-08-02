@@ -1,6 +1,7 @@
 const exercises = [
   {
     id: 'e1',
+    bookmarked: false,
     category: 'Atemübung',
     description: '4 Sekunden tief einatmen, 7 Sekunden ruhig ausatmen',
     repeat: 'alle 60 Minuten',
@@ -8,6 +9,7 @@ const exercises = [
   },
   {
     id: 'e2',
+    bookmarked: false,
     category: 'Augenübung',
     description: 'Blick vom Bildschirm weg in die Ferne schweifen lassen',
     repeat: 'alle 20 Minuten',
@@ -15,6 +17,7 @@ const exercises = [
   },
   {
     id: 'e3',
+    bookmarked: false,
     category: 'Bewegung',
     description: 'Hinstellen, ganzen Körper strecken und Gelenke kreisen',
     repeat: 'alle 30 Minuten',

@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import Bookmark from '../Bookmark/Bookmark';
 
-export default function Card({category, description, repeat, duration}) {
+export default function Card({id, onBookmark, bookmarked, category, description, repeat, duration}) {
   return (
     <CardContainer>
+      <Bookmark id={id} bookmarked={bookmarked} onBookmark={onBookmark} />
       <h2>{category}</h2>
       <p data-testid="description">{description}</p>
       <StyledList>
@@ -20,6 +22,7 @@ const CardContainer = styled.article`
   border-radius: 1rem;
   padding: 1rem;
   margin-bottom: 1rem;
+  position: relative;
 `;
 
 const StyledList = styled.ul`
