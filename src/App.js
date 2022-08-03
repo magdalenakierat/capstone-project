@@ -1,13 +1,17 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import Cards from './components/Cards/Cards';
 import CategoryList from './components/CategoryList/CategoryList';
 import db from './db';
+import {loadFromLocalStorage, writeToLocalStorage} from './util/LocalStorage';
 
 export default function App() {
   const [filter, setFilter] = useState('Alle');
 
-  const [exercises, setExercise] = useState(db);
+  const [exercises, setExercise] = useState(() => {
+    const exercisesFromLocal = loadFromLocalStorage('exercises');
+    return exercisesFromLocal ?? db;
+  });
 
   function handleFilter(stringToFilter) {
     setFilter(stringToFilter);
@@ -23,6 +27,10 @@ export default function App() {
       })
     );
   }
+
+  useEffect(() => {
+    writeToLocalStorage('exercises', exercises);
+  }, [exercises]);
 
   return (
     <StyledWrapper>
