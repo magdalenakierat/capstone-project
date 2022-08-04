@@ -2,11 +2,14 @@ import {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import Cards from './components/Cards/Cards';
 import CategoryList from './components/CategoryList/CategoryList';
-import BreatheAnimation from './components/BreatheAnimation/BreatheAnimation';
+// import BreatheAnimation from './components/BreatheAnimation/BreatheAnimation';
+// import CountDownTimer from './components/CountDownTimer';
 import db from './db';
 import {loadFromLocalStorage, writeToLocalStorage} from './util/LocalStorage';
 
 export default function App() {
+  const minSecs = {minutes: 5, seconds: 0};
+
   const [filter, setFilter] = useState('Alle');
 
   const [exercises, setExercise] = useState(() => {
@@ -42,6 +45,7 @@ export default function App() {
       </section>
       <Cards filter={filter} exercises={exercises} onBookmark={handleBookmark} />
       {/* <BreatheAnimation /> */}
+      {/* <CountDownTimer minSecs={minSecs} /> */}
     </StyledWrapper>
   );
 }
