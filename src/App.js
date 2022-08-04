@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import Cards from './components/Cards/Cards';
 import CategoryList from './components/CategoryList/CategoryList';
+import BreatheAnimation from './components/BreatheAnimation/BreatheAnimation';
 import db from './db';
 import {loadFromLocalStorage, writeToLocalStorage} from './util/LocalStorage';
 
@@ -40,6 +41,7 @@ export default function App() {
         <CategoryList filter={filter} onFilter={handleFilter} />
       </section>
       <Cards filter={filter} exercises={exercises} onBookmark={handleBookmark} />
+      {/* <BreatheAnimation /> */}
     </StyledWrapper>
   );
 }
