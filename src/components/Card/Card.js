@@ -12,7 +12,9 @@ export default function Card({id, onBookmark, bookmarked, category, description,
         <li data-testid="repeat">Wiederholung: {repeat}</li>
         <li data-testid="duration">Dauer: {duration}</li>
       </StyledList>
-      <PlayButton />
+      <StyledFooter>
+        <PlayButton />
+      </StyledFooter>
     </CardContainer>
   );
 }
@@ -34,4 +36,9 @@ const StyledList = styled.ul`
   list-style-type: none;
   font-size: 0.875rem;
   line-height: 1.25rem;
+`;
+
+const StyledFooter = styled.footer`
+  display: flex;
+  width: 100%;
 `;
