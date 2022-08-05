@@ -3,7 +3,7 @@ import Bookmark from '../Bookmark/Bookmark';
 import PlayButton from '../PlayButton';
 import {Link} from 'react-router-dom';
 
-export default function Card({id, onBookmark, bookmarked, category, description, repeat, duration}) {
+export default function Card({id, onBookmark, bookmarked, category, description, repeat, duration, pathname}) {
   return (
     <CardContainer>
       <Bookmark id={id} bookmarked={bookmarked} onBookmark={onBookmark} />
@@ -13,11 +13,13 @@ export default function Card({id, onBookmark, bookmarked, category, description,
         <li data-testid="repeat">Wiederholung: {repeat}</li>
         <li data-testid="duration">Dauer: {duration}</li>
       </StyledList>
-      <Link to="/animation">
-        <StyledFooter>
-          <PlayButton />
-        </StyledFooter>
-      </Link>
+      {pathname === '/' || (
+        <Link to={pathname}>
+          <StyledFooter>
+            <PlayButton />
+          </StyledFooter>
+        </Link>
+      )}
     </CardContainer>
   );
 }
