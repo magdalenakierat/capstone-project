@@ -1,20 +1,38 @@
-import React from 'react';
 import styled, {keyframes} from 'styled-components';
 
 export default function BreatheAnimation() {
   return (
     <Container>
       <Circle />
+      <StyledParagraphIn>Ein</StyledParagraphIn>
+      <StyledParagraphOut>Aus</StyledParagraphOut>
     </Container>
   );
 }
 const breatheAnimation = keyframes`
  0% { height: 50px; width: 50px;opacity: 0.6; }
- 35% { height: 200px; width: 200px; opacity: 0.9 }
- 45% { height: 205px; width: 205px; opacity: 1; }
+ /* 45% { height: 200px; width: 200px; opacity: 0.9 } */
+ 50% { height: 205px; width: 205px; opacity: 1; }
  100% { height: 50px; width: 50px; opacity: 0.6; }
 `;
+
+const textAnimationIn = keyframes`
+ 0% { opacity: 0; }
+ 25% { opacity: 1; }
+ 49% { opacity: 0; }
+ 100% { opacity: 0; }
+`;
+
+const textAnimationOut = keyframes`
+ 0% { opacity: 0; }
+ 51% { opacity: 0; }
+ 75% { opacity: 1; }
+ 100% { opacity: 0; }
+`;
+
 const Circle = styled.div`
+  position: absolute;
+  z-index: 1;
   height: 50px;
   width: 50px;
   border-style: solid;
@@ -22,7 +40,7 @@ const Circle = styled.div`
   border-radius: 50%;
   border-color: black;
   animation-name: ${breatheAnimation};
-  animation-duration: 11s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
 `;
 const Container = styled.div`
@@ -32,4 +50,20 @@ const Container = styled.div`
   flex-direction: column;
   /* width: 100%; */
   height: 450px;
+`;
+
+const StyledParagraphIn = styled.p`
+  position: absolute;
+  z-index: 2;
+  animation-name: ${textAnimationIn};
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+`;
+
+const StyledParagraphOut = styled.p`
+  position: absolute;
+  z-index: 3;
+  animation-name: ${textAnimationOut};
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 `;

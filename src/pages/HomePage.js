@@ -1,5 +1,4 @@
 import {useState, useEffect} from 'react';
-import styled from 'styled-components';
 import Cards from '../components/Cards/Cards';
 import CategoryList from '../components/CategoryList/CategoryList';
 import db from '../db';
@@ -43,13 +42,3 @@ export default function HomePage() {
     </>
   );
 }
-
-const StyledWrapper = styled.main`
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-`;
