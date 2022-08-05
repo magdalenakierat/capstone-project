@@ -13,11 +13,11 @@ export default function Card({id, onBookmark, bookmarked, category, description,
         <li data-testid="repeat">Wiederholung: {repeat}</li>
         <li data-testid="duration">Dauer: {duration}</li>
       </StyledList>
-      <StyledFooter>
-        <Link to="/animation">
+      <Link to="/animation">
+        <StyledFooter>
           <PlayButton />
-        </Link>
-      </StyledFooter>
+        </StyledFooter>
+      </Link>
     </CardContainer>
   );
 }
@@ -45,3 +45,7 @@ const StyledFooter = styled.footer`
   display: flex;
   width: 100%;
 `;
+
+// const Link = styled.a`
+//   border: 1px solid black;
+// `;
