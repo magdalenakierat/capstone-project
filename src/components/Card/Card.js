@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Bookmark from '../Bookmark/Bookmark';
 import PlayButton from '../PlayButton';
+import {Link} from 'react-router-dom';
 
 export default function Card({id, onBookmark, bookmarked, category, description, repeat, duration}) {
   return (
@@ -13,7 +14,9 @@ export default function Card({id, onBookmark, bookmarked, category, description,
         <li data-testid="duration">Dauer: {duration}</li>
       </StyledList>
       <StyledFooter>
-        <PlayButton />
+        <Link to="/animation">
+          <PlayButton />
+        </Link>
       </StyledFooter>
     </CardContainer>
   );
