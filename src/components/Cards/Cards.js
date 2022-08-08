@@ -33,6 +33,7 @@ export default function Cards({onBookmark, exercises, filter}) {
               description={exercise.description}
               repeat={exercise.repeat}
               duration={exercise.duration}
+              pathname={exercise.pathname}
             />
           ))
         )}

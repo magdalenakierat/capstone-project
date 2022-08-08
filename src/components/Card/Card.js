@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import Bookmark from '../Bookmark/Bookmark';
+import PlayButton from '../PlayButton';
+import {Link} from 'react-router-dom';
 
-export default function Card({id, onBookmark, bookmarked, category, description, repeat, duration}) {
+export default function Card({id, onBookmark, bookmarked, category, description, repeat, duration, pathname}) {
   return (
     <CardContainer>
       <Bookmark id={id} bookmarked={bookmarked} onBookmark={onBookmark} />
@@ -11,6 +13,13 @@ export default function Card({id, onBookmark, bookmarked, category, description,
         <li data-testid="repeat">Wiederholung: {repeat}</li>
         <li data-testid="duration">Dauer: {duration}</li>
       </StyledList>
+      {pathname === '/' || (
+        <Link to={pathname}>
+          <StyledFooter>
+            <PlayButton />
+          </StyledFooter>
+        </Link>
+      )}
     </CardContainer>
   );
 }
@@ -32,4 +41,9 @@ const StyledList = styled.ul`
   list-style-type: none;
   font-size: 0.875rem;
   line-height: 1.25rem;
+`;
+
+const StyledFooter = styled.footer`
+  display: flex;
+  width: 100%;
 `;

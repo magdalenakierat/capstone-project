@@ -1,45 +1,17 @@
-import {useState, useEffect} from 'react';
+import {Route, Routes} from 'react-router-dom';
 import styled from 'styled-components';
-import Cards from './components/Cards/Cards';
-import CategoryList from './components/CategoryList/CategoryList';
-import db from './db';
-import {loadFromLocalStorage, writeToLocalStorage} from './util/LocalStorage';
+import HomePage from './pages/HomePage';
+import AnimationPage from './pages/AnimationPage';
 
 export default function App() {
-  const [filter, setFilter] = useState('Alle');
-
-  const [exercises, setExercise] = useState(() => {
-    const exercisesFromLocal = loadFromLocalStorage('exercises');
-    return exercisesFromLocal ?? db;
-  });
-
-  function handleFilter(stringToFilter) {
-    setFilter(stringToFilter);
-  }
-
-  function handleBookmark(id) {
-    setExercise(
-      exercises.map(exercise => {
-        if (exercise.id === id) {
-          return {...exercise, bookmarked: !exercise.bookmarked};
-        }
-        return exercise;
-      })
-    );
-  }
-
-  useEffect(() => {
-    writeToLocalStorage('exercises', exercises);
-  }, [exercises]);
+  const exerciseDuration = {minutes: 5, seconds: 0};
 
   return (
     <StyledWrapper>
-      <h1>Pausen</h1>
-      <section>
-        <h2>Nach Kategorie filtern</h2>
-        <CategoryList filter={filter} onFilter={handleFilter} />
-      </section>
-      <Cards filter={filter} exercises={exercises} onBookmark={handleBookmark} />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/animation" element={<AnimationPage exerciseDuration={exerciseDuration} />} />
+      </Routes>
     </StyledWrapper>
   );
 }
