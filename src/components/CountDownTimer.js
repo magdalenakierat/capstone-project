@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 
-export default function CountDownTimer({minSecs}) {
-  const {minutes = 0, seconds = 60} = minSecs;
+export default function CountDownTimer({exerciseDuration}) {
+  const {minutes = 0, seconds = 60} = exerciseDuration;
   const [[mins, secs], setTime] = useState([minutes, seconds]);
 
   const tick = () => {
@@ -20,9 +20,5 @@ export default function CountDownTimer({minSecs}) {
     return () => clearInterval(timerId);
   });
 
-  return (
-    <div>
-      <p>{`${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`}</p>
-    </div>
-  );
+  return <p>{`${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`}</p>;
 }

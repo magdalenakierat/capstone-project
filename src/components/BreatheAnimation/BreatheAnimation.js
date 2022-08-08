@@ -4,13 +4,13 @@ export default function BreatheAnimation() {
   return (
     <Container>
       <Circle />
-      <StyledParagraphIn>Ein</StyledParagraphIn>
-      <StyledParagraphOut>Aus</StyledParagraphOut>
+      <StyledSpanIn>Ein</StyledSpanIn>
+      <StyledSpanOut>Aus</StyledSpanOut>
     </Container>
   );
 }
 const breatheAnimation = keyframes`
- 0% { height: 50px; width: 50px;opacity: 0.6; }
+ 0% { height: 50px; width: 50px; opacity: 0.6; }
  50% { height: 205px; width: 205px; opacity: 1; }
  100% { height: 50px; width: 50px; opacity: 0.6; }
 `;
@@ -50,7 +50,7 @@ const Container = styled.div`
   height: 450px;
 `;
 
-const StyledParagraphIn = styled.p`
+const StyledSpanIn = styled.span`
   position: absolute;
   z-index: 2;
   animation-name: ${textAnimationIn};
@@ -58,7 +58,7 @@ const StyledParagraphIn = styled.p`
   animation-iteration-count: infinite;
 `;
 
-const StyledParagraphOut = styled.p`
+const StyledSpanOut = styled.span`
   position: absolute;
   z-index: 3;
   animation-name: ${textAnimationOut};

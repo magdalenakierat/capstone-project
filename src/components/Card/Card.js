@@ -47,7 +47,3 @@ const StyledFooter = styled.footer`
   display: flex;
   width: 100%;
 `;
-
-// const Link = styled.a`
-//   border: 1px solid black;
-// `;

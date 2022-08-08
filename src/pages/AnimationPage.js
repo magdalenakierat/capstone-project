@@ -3,10 +3,10 @@ import BreatheAnimation from '../components/BreatheAnimation/BreatheAnimation';
 import CountDownTimer from '../components/CountDownTimer';
 import {Link} from 'react-router-dom';
 
-export default function AnimationPage({minSecs}) {
+export default function AnimationPage({exerciseDuration}) {
   setTimeout(function () {
     window.open('/', '_self');
-  }, minSecs.minutes * 60000);
+  }, exerciseDuration.minutes * 60000);
 
   return (
     <>
@@ -14,7 +14,7 @@ export default function AnimationPage({minSecs}) {
         <BackButton />
       </Link>
       <BreatheAnimation />
-      <CountDownTimer minSecs={minSecs} />
+      <CountDownTimer exerciseDuration={exerciseDuration} />
     </>
   );
 }

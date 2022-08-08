@@ -4,13 +4,13 @@ import HomePage from './pages/HomePage';
 import AnimationPage from './pages/AnimationPage';
 
 export default function App() {
-  const minSecs = {minutes: 5, seconds: 0};
+  const exerciseDuration = {minutes: 5, seconds: 0};
 
   return (
     <StyledWrapper>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/animation" element={<AnimationPage minSecs={minSecs} />} />
+        <Route path="/animation" element={<AnimationPage exerciseDuration={exerciseDuration} />} />
       </Routes>
     </StyledWrapper>
   );
