@@ -17,11 +17,10 @@ export default function App() {
 }
 
 const StyledWrapper = styled.main`
-  max-width: 860px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  align-items: left;
 `;

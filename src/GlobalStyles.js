@@ -12,6 +12,7 @@ export default styled.createGlobalStyle`
 
   :root {
     --primary-color: #6d81fe;
+    --primary-color-light: rgba(109, 129, 254, 0.15);
     --secondary-color: #ff9575;
     --text-color: #23314c;
     --body-background-color: #f6f7fc;
@@ -24,9 +25,18 @@ export default styled.createGlobalStyle`
     color: var(--text-color);
   }
 
+  h1 {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    margin: 1rem 0 2rem 0;
+  }
+
   h2 {
     font-size: 1.25rem;
     line-height: 2rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
   }
 
   p {

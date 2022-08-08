@@ -3,6 +3,7 @@ import Cards from '../components/Cards/Cards';
 import CategoryList from '../components/CategoryList/CategoryList';
 import db from '../db';
 import {loadFromLocalStorage, writeToLocalStorage} from '../util/LocalStorage';
+import styled from 'styled-components';
 
 export default function HomePage() {
   const [filter, setFilter] = useState('Alle');
@@ -33,7 +34,7 @@ export default function HomePage() {
 
   return (
     <>
-      <h1>Entdecken</h1>
+      <StyledH1>Entdecken</StyledH1>
       <section>
         <h2>Filtern</h2>
         <CategoryList filter={filter} onFilter={handleFilter} />
@@ -42,3 +43,17 @@ export default function HomePage() {
     </>
   );
 }
+
+const StyledH1 = styled.h1`
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 2.8rem;
+    height: 3px;
+    bottom: 0;
+    border-bottom: 3px solid var(--primary-color);
+  }
+`;
