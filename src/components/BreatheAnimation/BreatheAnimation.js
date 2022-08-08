@@ -11,7 +11,6 @@ export default function BreatheAnimation() {
 }
 const breatheAnimation = keyframes`
  0% { height: 50px; width: 50px;opacity: 0.6; }
- /* 45% { height: 200px; width: 200px; opacity: 0.9 } */
  50% { height: 205px; width: 205px; opacity: 1; }
  100% { height: 50px; width: 50px; opacity: 0.6; }
 `;
@@ -48,7 +47,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* width: 100%; */
   height: 450px;
 `;
 
