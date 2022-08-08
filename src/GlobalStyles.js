@@ -10,9 +10,18 @@ export default styled.createGlobalStyle`
     padding: 0;
   }
 
+  :root {
+    --primary-color: #6d81fe;
+    --secondary-color: #ff9575;
+    --text-color: #23314c;
+    --body-background-color: #f6f7fc;
+    --background-color-light: #fff;
+  }
+
   body {
     font-family: 'Work Sans', sans-serif;
-    background-color: #fafafa;
+    background-color: var(--body-background-color);
+    color: var(--text-color);
   }
 
   h2 {

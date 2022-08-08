@@ -31,15 +31,15 @@ const StyledCategoryListItem = styled.li`
 const StyledButton = styled.button`
   border-radius: 1.25rem;
   border: none;
-  background: ${props => (props.isFilter ? '#000' : '#e6e8e9')};
-  color: ${props => (props.isFilter ? '#e6e8e9' : '#000')};
+  background: ${props => (props.isFilter ? '#6d81fe' : 'rgba(109, 129, 254, 0.15)')};
+  color: ${props => (props.isFilter ? '#fff' : '#000')};
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.25rem;
   padding: 0.5rem 1rem;
   margin: 0 0.5rem 0.5rem 0;
   &:hover {
-    background-color: #000;
-    color: #e6e8e9;
+    background-color: #6d81fe;
+    color: #fff;
   }
 `;

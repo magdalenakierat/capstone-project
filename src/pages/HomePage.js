@@ -33,9 +33,9 @@ export default function HomePage() {
 
   return (
     <>
-      <h1>Pausen</h1>
+      <h1>Entdecken</h1>
       <section>
-        <h2>Nach Kategorie filtern</h2>
+        <h2>Filtern</h2>
         <CategoryList filter={filter} onFilter={handleFilter} />
       </section>
       <Cards filter={filter} exercises={exercises} onBookmark={handleBookmark} />
