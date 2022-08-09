@@ -34,7 +34,7 @@ export default function HomePage() {
 
   return (
     <>
-      <StyledH1>Entdecken</StyledH1>
+      <StyledHeading>Entdecken</StyledHeading>
       <section>
         <h2>Filtern</h2>
         <CategoryList filter={filter} onFilter={handleFilter} />
@@ -44,7 +44,7 @@ export default function HomePage() {
   );
 }
 
-const StyledH1 = styled.h1`
+const StyledHeading = styled.h1`
   display: inline-block;
   padding-bottom: 0.5rem;
   position: relative;
