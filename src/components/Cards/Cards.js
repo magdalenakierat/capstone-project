@@ -30,6 +30,7 @@ export default function Cards({onBookmark, exercises, filter}) {
               id={exercise.id}
               key={exercise.id}
               category={exercise.category}
+              title={exercise.title}
               description={exercise.description}
               repeat={exercise.repeat}
               duration={exercise.duration}

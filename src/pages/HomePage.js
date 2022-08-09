@@ -48,7 +48,7 @@ const StyledH1 = styled.h1`
   display: inline-block;
   padding-bottom: 0.5rem;
   position: relative;
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     width: 2.8rem;

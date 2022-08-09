@@ -21,7 +21,7 @@ export default function CategoryList({onFilter, filter}) {
 const StyledCategoryList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  margin: 0.5rem 0 0.25rem 0;
+  margin: 0.5rem 0 2rem 0;
 `;
 
 const StyledCategoryListItem = styled.li`

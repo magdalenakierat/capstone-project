@@ -15,6 +15,7 @@ export default styled.createGlobalStyle`
     --primary-color-light: rgba(109, 129, 254, 0.15);
     --secondary-color: #ff9575;
     --text-color: #23314c;
+    --text-color-light: rgba(34, 49, 76, 0.5);
     --body-background-color: #f6f7fc;
     --background-color-light: #fff;
   }
@@ -36,7 +37,7 @@ export default styled.createGlobalStyle`
     font-size: 1.25rem;
     line-height: 2rem;
     font-weight: 600;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.25rem 0;
   }
 
   p {
