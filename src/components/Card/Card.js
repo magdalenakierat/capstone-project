@@ -51,6 +51,7 @@ const StyledSpan = styled.span`
   text-transform: uppercase;
   color: var(--text-color-light);
   font-weight: 400;
+  margin-bottom: -0.2rem;
 `;
 
 const StyledSpanStrong = styled.span`

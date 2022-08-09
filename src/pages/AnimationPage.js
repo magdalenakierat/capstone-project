@@ -2,6 +2,7 @@ import BackButton from '../components/BackButton';
 import BreatheAnimation from '../components/BreatheAnimation/BreatheAnimation';
 import CountDownTimer from '../components/CountDownTimer';
 import {Link} from 'react-router-dom';
+import styled from 'styled-components';
 
 export default function AnimationPage({exerciseDuration}) {
   setTimeout(function () {
@@ -14,7 +15,13 @@ export default function AnimationPage({exerciseDuration}) {
         <BackButton />
       </Link>
       <BreatheAnimation />
-      <CountDownTimer exerciseDuration={exerciseDuration} />
+      <StyledContainer>
+        <CountDownTimer exerciseDuration={exerciseDuration} />
+      </StyledContainer>
     </>
   );
 }
+
+const StyledContainer = styled.div`
+  padding-left: 25%;
+`;
