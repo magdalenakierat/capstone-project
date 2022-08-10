@@ -12,12 +12,9 @@ export default function BackButton() {
 const StyledButton = styled.button`
   margin-left: auto;
   border: none;
-  background-color: #919191;
+  background-color: var(--primary-color-light);
   border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   padding-top: 0.2rem;
-  &:hover {
-    background-color: black;
-  }
 `;

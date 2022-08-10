@@ -9,9 +9,10 @@ export default function Bookmark({onBookmark, bookmarked, id}) {
 }
 
 const StyledBookmark = styled.button`
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
   border: none;
-  background-color: transparent;
+  background-color: var(--primary-color-light);
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding-top: 0.2rem;
 `;

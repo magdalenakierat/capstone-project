@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import styled from 'styled-components';
 
 export default function CountDownTimer({exerciseDuration}) {
   const {minutes = 0, seconds = 60} = exerciseDuration;
@@ -20,5 +21,12 @@ export default function CountDownTimer({exerciseDuration}) {
     return () => clearInterval(timerId);
   });
 
-  return <p>{`${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`}</p>;
+  return <StyledParagraph>{`${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`}</StyledParagraph>;
 }
+
+const StyledParagraph = styled.p`
+  font-size: 4rem;
+  color: var(--primary-color);
+  font-weight: 300;
+  min-width: 10.6rem;
+`;

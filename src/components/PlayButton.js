@@ -10,14 +10,14 @@ export default function PlayButton() {
 }
 
 const StyledButton = styled.button`
-  margin-left: auto;
   border: none;
-  background-color: #919191;
+  background-color: var(--primary-color);
   border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
   padding-top: 0.2rem;
+  margin-left: 0.5rem;
   &:hover {
-    background-color: black;
+    background-color: var(--text-color);
   }
 `;
