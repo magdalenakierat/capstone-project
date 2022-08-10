@@ -44,7 +44,10 @@ export default function Cards({onBookmark, exercises, filter}) {
 
 const StyledWrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin: 0 -0.5rem;
+  flex-direction: column;
+  gap: 1rem;
+  @media (min-width: 600px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;

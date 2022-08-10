@@ -29,13 +29,14 @@ export default function Card({id, onBookmark, bookmarked, category, title, descr
 }
 
 const CardContainer = styled.article`
-  max-width: 360px;
-  margin: 0 0.5rem 1rem 0.5rem;
   background-color: #fff;
   box-shadow: 0 8px 8px rgba(102, 102, 102, 0.05);
   border-radius: 2rem;
   padding: 1rem 1rem 1rem 1.5rem;
   position: relative;
+  @media (min-width: 600px) {
+    width: 48%;
+  }
 `;
 
 const StyledFooter = styled.footer`
