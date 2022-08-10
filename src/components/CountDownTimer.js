@@ -28,4 +28,5 @@ const StyledParagraph = styled.p`
   font-size: 4rem;
   color: var(--primary-color);
   font-weight: 300;
+  min-width: 10.6rem;
 `;
