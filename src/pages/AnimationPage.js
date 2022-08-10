@@ -16,12 +16,19 @@ export default function AnimationPage({exerciseDuration}) {
       </Link>
       <BreatheAnimation />
       <StyledContainer>
-        <CountDownTimer exerciseDuration={exerciseDuration} />
+        <StyledWrapper>
+          <CountDownTimer exerciseDuration={exerciseDuration} />
+        </StyledWrapper>
       </StyledContainer>
     </>
   );
 }
 
 const StyledContainer = styled.div`
-  padding-left: 25%;
+  display: flex;
+  justify-content: center;
+`;
+
+const StyledWrapper = styled.div`
+  min-width: 10.6rem;
 `;
