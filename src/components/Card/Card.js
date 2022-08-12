@@ -3,7 +3,7 @@ import Bookmark from '../Bookmark/Bookmark';
 import PlayButton from '../PlayButton/PlayButton';
 import {Link} from 'react-router-dom';
 
-export default function Card({id, onBookmark, bookmarked, category, title, description, repeat, duration, pathname}) {
+export default function Card({id, onBookmark, bookmarked, category, title, description, duration, pathname}) {
   return (
     <CardContainer>
       <h2>

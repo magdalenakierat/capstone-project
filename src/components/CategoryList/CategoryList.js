@@ -4,27 +4,27 @@ export default function CategoryList({onFilter, filter}) {
   const filterOptions = ['Alle', 'Bewegung', 'Atemübung', 'Augenübung', 'Favoriten'];
 
   return (
-    <StyledCategoryList>
+    <StyledList>
       {filterOptions.map(option => {
         return (
-          <StyledCategoryListItem key={option}>
+          <StyledListItem key={option}>
             <StyledButton isFilter={filter === option} onClick={() => onFilter(option)}>
               {option}
             </StyledButton>
-          </StyledCategoryListItem>
+          </StyledListItem>
         );
       })}
-    </StyledCategoryList>
+    </StyledList>
   );
 }
 
-const StyledCategoryList = styled.ul`
+const StyledList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin: 0.5rem 0 2rem 0;
 `;
 
-const StyledCategoryListItem = styled.li`
+const StyledListItem = styled.li`
   list-style-type: none;
 `;
 
