@@ -5,4 +5,4 @@ export default {
   component: CategoryList,
 };
 
-export const Default = () => <CategoryList />;
+export const Default = () => <CategoryList onFilter={() => console.log('Button was clicked.')} />;
