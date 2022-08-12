@@ -1,6 +1,6 @@
-import BackButton from '../components/BackButton';
+import BackButton from '../components/BackButton/BackButton';
 import BreatheAnimation from '../components/BreatheAnimation/BreatheAnimation';
-import CountDownTimer from '../components/CountDownTimer';
+import CountDownTimer from '../components/CountDownTimer/CountDownTimer';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 

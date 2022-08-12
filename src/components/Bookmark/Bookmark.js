@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import BookmarkIcon from '../BookmarkIcon/BookmarkIcon';
-import NoBookmarkIcon from '../NoBookmarkIcon/NoBookmarkIcon';
+import BookmarkIcon from './BookmarkIcon';
+import NoBookmarkIcon from './NoBookmarkIcon';
 
 export default function Bookmark({onBookmark, bookmarked, id}) {
   return (

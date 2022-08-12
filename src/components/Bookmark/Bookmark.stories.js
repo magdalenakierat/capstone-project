@@ -5,4 +5,4 @@ export default {
   component: Bookmark,
 };
 
-export const Default = () => <Bookmark />;
+export const Default = () => <Bookmark onBookmark={() => console.log('Bookmark was clicked.')} />;

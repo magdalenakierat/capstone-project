@@ -14,7 +14,7 @@ const StyledButton = styled.button`
   border: none;
   background-color: var(--primary-color-light);
   border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
+  width: 2.25rem;
+  height: 2.25rem;
   padding-top: 0.2rem;
 `;
