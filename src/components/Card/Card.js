@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Bookmark from '../Bookmark/Bookmark';
-import PlayButton from '../PlayButton';
+import PlayButton from '../PlayButton/PlayButton';
 import {Link} from 'react-router-dom';
 
 export default function Card({id, onBookmark, bookmarked, category, title, description, repeat, duration, pathname}) {

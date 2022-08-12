@@ -34,11 +34,10 @@ export default function HomePage() {
 
   return (
     <>
-      <StyledHeading>Entdecken</StyledHeading>
-      <section>
-        <h2>Filtern</h2>
+      <StyledHeading>Übungen entdecken</StyledHeading>
+      <StyledDiv>
         <CategoryList filter={filter} onFilter={handleFilter} />
-      </section>
+      </StyledDiv>
       <Cards filter={filter} exercises={exercises} onBookmark={handleBookmark} />
     </>
   );
@@ -56,4 +55,12 @@ const StyledHeading = styled.h1`
     bottom: 0;
     border-bottom: 3px solid var(--primary-color);
   }
+`;
+
+const StyledDiv = styled.section`
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: linear-gradient(180deg, rgba(246, 247, 252, 1) 85%, rgba(246, 247, 252, 0) 100%);
+  padding-top: 0.5rem;
 `;
