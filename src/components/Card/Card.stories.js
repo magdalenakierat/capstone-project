@@ -24,5 +24,6 @@ export const Default = () => (
     title={exampleExercise.title}
     description={exampleExercise.description}
     duration={exampleExercise.duration}
+    onBookmark={() => console.log('Bookmark was clicked.')}
   />
 );
