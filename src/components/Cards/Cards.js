@@ -23,7 +23,7 @@ export default function Cards({onBookmark, exercises, filter}) {
           durch.
         </p>
       ) : (
-        filteredExercises.map(({bookmarked, id, category, title, description, repeat, duration, pathname}) => (
+        filteredExercises.map(({bookmarked, id, category, title, description, duration, pathname}) => (
           <Card
             onBookmark={onBookmark}
             bookmarked={bookmarked}
@@ -32,7 +32,6 @@ export default function Cards({onBookmark, exercises, filter}) {
             category={category}
             title={title}
             description={description}
-            repeat={repeat}
             duration={duration}
             pathname={pathname}
           />
