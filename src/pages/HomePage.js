@@ -35,9 +35,9 @@ export default function HomePage() {
   return (
     <>
       <StyledHeading>Übungen entdecken</StyledHeading>
-      <StyledDiv>
+      <StyledSection>
         <CategoryList filter={filter} onFilter={handleFilter} />
-      </StyledDiv>
+      </StyledSection>
       <Cards filter={filter} exercises={exercises} onBookmark={handleBookmark} />
     </>
   );
@@ -57,7 +57,7 @@ const StyledHeading = styled.h1`
   }
 `;
 
-const StyledDiv = styled.section`
+const StyledSection = styled.section`
   position: sticky;
   top: 0;
   z-index: 5;
