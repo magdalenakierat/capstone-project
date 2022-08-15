@@ -6,7 +6,7 @@ describe('Card', () => {
   it('renders a card with a heading and two paragraphs', () => {
     render(
       <MemoryRouter>
-        <Card />
+        <Card pathname="/" />
       </MemoryRouter>
     );
 
