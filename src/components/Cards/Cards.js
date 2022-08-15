@@ -16,7 +16,7 @@ export default function Cards({onBookmark, exercises, filter}) {
     }
   });
   return (
-    <StyledWrapper>
+    <StyledWrapper data-testid="cards">
       {filteredExercises.length === 0 ? (
         <p>
           Du hast noch keine Favoriten gespeichert. Lass dich weiter inspirieren oder atme einfach ein paar Mal tief
