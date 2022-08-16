@@ -21,7 +21,11 @@ export default function CountDownTimer({exerciseDuration}) {
     return () => clearInterval(timerId);
   });
 
-  return <StyledParagraph>{`${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`}</StyledParagraph>;
+  return (
+    <StyledParagraph data-testid="timer">{`${mins.toString().padStart(2, '0')}:${secs
+      .toString()
+      .padStart(2, '0')}`}</StyledParagraph>
+  );
 }
 
 const StyledParagraph = styled.p`

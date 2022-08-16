@@ -6,7 +6,6 @@ const exercises = [
     title: 'Herzkohärenz',
     pathname: '/animation',
     description: '5 Sekunden tief einatmen, 5 Sekunden ruhig ausatmen',
-    repeat: 'alle 60 Minuten',
     duration: '5 Minuten',
   },
   {
@@ -16,7 +15,6 @@ const exercises = [
     title: 'Gucken und fühlen',
     pathname: '/',
     description: 'Blick vom Bildschirm weg in die Ferne schweifen lassen',
-    repeat: 'alle 20 Minuten',
     duration: '20 Sekunden',
   },
   {
@@ -35,7 +33,6 @@ const exercises = [
     title: 'Entschleunigtes Atmen',
     pathname: '/animation',
     description: '4 Sekunden tief einatmen, 7 Sekunden ruhig ausatmen',
-    repeat: 'alle 60 Minuten',
     duration: '5 Minuten',
   },
   {
@@ -45,7 +42,6 @@ const exercises = [
     title: 'Blinzelpause',
     pathname: '/',
     description: 'Entspannt den Kopf zurücklehnen und so schnell wie möglich blinzeln',
-    repeat: 'alle 20 Minuten',
     duration: '20 Sekunden',
   },
   {
@@ -54,8 +50,6 @@ const exercises = [
     category: 'Bewegung',
     title: 'Schultern kreisen',
     pathname: '/',
-    description: 'Hinstellen und abwechselnd Schultern nach vorn und hinten kreisen',
-    repeat: 'alle 30 Minuten',
     duration: '1 Minute',
   },
   {
@@ -65,7 +59,6 @@ const exercises = [
     title: 'Stress wegatmen',
     pathname: '/animation',
     description: '5 Sekunden tief einatmen, 5 Sekunden ruhig ausatmen',
-    repeat: 'alle 60 Minuten',
     duration: '5 Minuten',
   },
   {
@@ -75,7 +68,6 @@ const exercises = [
     title: 'Augen-Yoga',
     pathname: '/',
     description: 'Bewusst in alle 4 Himmelsrichtungen gucken, Augen kreisen lassen',
-    repeat: 'alle 20 Minuten',
     duration: '20 Sekunden',
   },
   {
@@ -85,7 +77,6 @@ const exercises = [
     title: 'Knie hoch',
     pathname: '/',
     description: 'Hinstellen, abwechselnd linkes und rechtes Knie zum Oberkörper ziehen',
-    repeat: 'alle 30 Minuten',
     duration: '1 Minute',
   },
 ];

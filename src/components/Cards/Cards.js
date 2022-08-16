@@ -16,14 +16,14 @@ export default function Cards({onBookmark, exercises, filter}) {
     }
   });
   return (
-    <StyledWrapper>
+    <StyledWrapper data-testid="cards">
       {filteredExercises.length === 0 ? (
         <p>
           Du hast noch keine Favoriten gespeichert. Lass dich weiter inspirieren oder atme einfach ein paar Mal tief
           durch.
         </p>
       ) : (
-        filteredExercises.map(({bookmarked, id, category, title, description, repeat, duration, pathname}) => (
+        filteredExercises.map(({bookmarked, id, category, title, description, duration, pathname}) => (
           <Card
             onBookmark={onBookmark}
             bookmarked={bookmarked}
@@ -32,7 +32,6 @@ export default function Cards({onBookmark, exercises, filter}) {
             category={category}
             title={title}
             description={description}
-            repeat={repeat}
             duration={duration}
             pathname={pathname}
           />

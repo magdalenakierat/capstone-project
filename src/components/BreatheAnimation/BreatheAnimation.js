@@ -2,7 +2,7 @@ import styled, {keyframes} from 'styled-components';
 
 export default function BreatheAnimation() {
   return (
-    <Container>
+    <Container data-testid="animation">
       <Circle1 />
       <Circle2 />
       <Circle3 />

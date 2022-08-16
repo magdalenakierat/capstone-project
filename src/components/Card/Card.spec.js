@@ -1,9 +1,14 @@
 import {render, screen} from '@testing-library/react';
+import {MemoryRouter} from 'react-router-dom';
 import Card from './Card';
 
 describe('Card', () => {
   it('renders a card with a heading and two paragraphs', () => {
-    render(<Card />);
+    render(
+      <MemoryRouter>
+        <Card pathname="/" />
+      </MemoryRouter>
+    );
 
     const heading = screen.getByRole('heading');
     const description = screen.getByTestId('description');
