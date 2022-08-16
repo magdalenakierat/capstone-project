@@ -9,6 +9,7 @@
         "ignoreTypes": ["/^\\$\\w+/"]
       }
     ],
+    "declaration-block-single-line-max-declarations": 5,
     "value-keyword-case": ["lower", {"ignoreKeywords": ["dummyValue"]}],
     "selector-type-no-unknown": [
       true,
